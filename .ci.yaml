@@ -3845,15 +3845,6 @@ targets:
         ["devicelab", "ios", "mac"]
       task_name: flutter_gallery__transition_perf_e2e_impeller_ios
 
-  - name: Mac_ios flutter_gallery_ios_sksl_warmup__transition_perf
-    recipe: devicelab/devicelab_drone
-    presubmit: false
-    timeout: 60
-    properties:
-      tags: >
-        ["devicelab", "ios", "mac"]
-      task_name: flutter_gallery_ios_sksl_warmup__transition_perf
-
   - name: Mac_ios spell_check_test
     bringup: true
     recipe: devicelab/devicelab_drone
@@ -4655,7 +4646,7 @@ targets:
       task_name: flutter_tool_startup__macos
 
   - name: Linux flutter_packaging
-    recipe: packaging_v2/packaging_v2
+    recipe: packaging/packaging
     timeout: 60
     scheduler: release
     bringup: true
@@ -4669,7 +4660,7 @@ targets:
         ["framework", "hostonly", "shard", "linux"]
 
   - name: Mac flutter_packaging
-    recipe: packaging_v2/packaging_v2
+    recipe: packaging/packaging
     timeout: 60
     scheduler: release
     bringup: true
@@ -4685,7 +4676,7 @@ targets:
       cpu: "x86"
 
   - name: Mac_arm64 flutter_packaging
-    recipe: packaging_v2/packaging_v2
+    recipe: packaging/packaging
     timeout: 60
     scheduler: release
     bringup: true
@@ -4701,7 +4692,7 @@ targets:
       cpu: "arm64"
 
   - name: Windows flutter_packaging
-    recipe: packaging_v2/packaging_v2
+    recipe: packaging/packaging
     timeout: 60
     scheduler: release
     bringup: true
